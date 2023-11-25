@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>
+		Insurance Premium Prediction 
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #05c46b;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #05c46b;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Insurance Premium Prediction</h1>
+
+	<!-- Create Form -->
+	<form id="form" action="/predict/" method="POST">
+		{% csrf_token %}
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="age">
+				Age
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="age" name="age"
+				placeholder="Enter your Age" />
+		</div>
+
+
+        <div class="form-control">
+			<label for="role" id="sex">
+				Open this select Sex
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="sex" id="sex" name="sex">
+				<option value="1">male</option>
+				<option value="0">feamle</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label for="bmi" id="bmi">
+				BMI
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="text"
+				id="bmi" name="bmi"
+				placeholder="Enter your bmi" />
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="children">
+				Children
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="children" name="children"
+				placeholder="Enter your children" />
+		</div>
+
+
+        <div class="form-control">
+			<label for="role" id="sex">
+				Open this select Smoker
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="smoker" id="somker" name="smoker">
+				<option value="1">yes</option>
+				<option value="0">no</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Would you recommend Region
+
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="submit">
+				<input type="radio"
+					id="southwest" name="region"
+					name="recommed" value="1">southwest</input>
+			</label>
+			<label for="submit">
+				<input type="radio"
+					id="southeast" name="region"
+					name="recommed" value="2">southeast</input>
+			</label>
+			<label for="submit">
+				<input type="radio"
+					id="northwest" name="region"
+					name="recommed" value="3">northwest</input>
+			</label>
+            <label for="submit">
+				<input type="radio"
+					id="northeast" name="region"
+					name="recommed" value="4">northeast</input>
+			</label>
+		</div>
+
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			Submit
+		</button>
+	</form>
+</body>
+</html>
