@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% block title %}
+    <title>Home</title>
+    {% endblock %}
+</head>
+<body>
+    <h1>Welcome Face Detection</h1>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/face/">Face</a></li>
+
+    </ul>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
